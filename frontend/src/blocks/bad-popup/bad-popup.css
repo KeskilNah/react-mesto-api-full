@@ -1,0 +1,15 @@
+.bad-popup {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s linear, visibility 0.5s linear;
+}

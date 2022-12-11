@@ -1,0 +1,9 @@
+.item__image {
+  min-width: 100%;
+  min-height: 282px;
+  max-height: 282px;
+  align-self: center;
+  overflow: hidden;
+  object-fit: cover;
+  cursor: pointer;
+}

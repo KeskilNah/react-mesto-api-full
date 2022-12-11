@@ -1,0 +1,15 @@
+.reg__button{
+  width: 358px;
+  height: 50px;
+  background: #FFFFFF;
+  border-radius: 2px;
+  color: #000;
+  font-weight: 400;
+  border: none;
+  font-size: 18px;
+  line-height: 50px;
+  text-align: center;
+  padding: 0;
+  margin-bottom: 15px;
+  margin-top: 216px;
+}

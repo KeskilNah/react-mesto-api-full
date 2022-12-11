@@ -1,0 +1,15 @@
+.reg__sign-in {
+  font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+text-align: center;
+text-decoration: none;
+}
+
+.reg__sign-in:visited {
+
+color: #FFF;
+
+}

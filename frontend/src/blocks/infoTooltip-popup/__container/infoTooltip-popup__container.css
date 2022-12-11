@@ -1,0 +1,16 @@
+.infoTooltip-popup__container {
+  text-align: center;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 10px;
+  padding: 60px 36px;
+  align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  .infoTooltip-popup__container {
+    padding: 25px 22px 25px;
+  }
+}

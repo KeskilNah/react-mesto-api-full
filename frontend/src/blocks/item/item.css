@@ -1,0 +1,12 @@
+.item {
+  max-height: 361px;
+  overflow: hidden;
+  border-radius: 10px;
+  line-height: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
