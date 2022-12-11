@@ -15,6 +15,7 @@ import { Login } from "./Login";
 import { InfoTooltip } from "./InfoTooltip";
 import ProtectedRoute from "./ProtectedRoute";
 import * as mestoAuth from "../utils/mestoAuth";
+import { options } from "../utils/constants";
 
 function App() {
   const [currentUser, setCurrentUser] = useState("");
@@ -23,13 +24,14 @@ function App() {
   const [isRequestingServer, setIsRequestingServer] = useState(false);
   const history = useHistory();
   const [loggedIn, setLoggedIn] = useState(false);
-
+  console.log(`Я ${loggedIn}`);
   useEffect(() => {
     if (loggedIn) {
+      console.log(options)
       Promise.all([Api.getUserInfo(), Api.getCards()])
         .then(([user, cards]) => {
-          setCurrentUser(user);
-          setCards(cards);
+          setCurrentUser(user.data);
+          setCards(cards.data);
         })
         .catch((err) => {
           console.log(err);

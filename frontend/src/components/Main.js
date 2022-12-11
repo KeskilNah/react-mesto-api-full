@@ -7,7 +7,7 @@ export const CardsContext = React.createContext();
 
 function Main(props) {
   const currentUser = React.useContext(CurrentUserContext);
-
+  console.log(props)
   return (
     <main className="main">
       <section className="profile">
@@ -39,16 +39,16 @@ function Main(props) {
       </section>
       <section className="gallery">
         <ul className="gallery__items">
-          {props.cards.map((data) => (
+          {props.cards.map((card) => (
             <Card
-              key={data._id}
-              card={data}
+              key={card._id}
+              card={card}
               onCardLike={props.onCardLike}
               onCardDelete={props.onCardDelete}
               onCardClick={props.onCardClick}
-              link={data.link}
-              likes={data.likes.length}
-              name={data.name}
+              link={card.link}
+              likes={card.likes.length}
+              name={card.name}
             />
           ))}
         </ul>
