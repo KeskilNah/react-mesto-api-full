@@ -62,11 +62,12 @@ function App() {
   }, [history, loggedIn]);
 
   function handleCardLike(card) {
+    console.log(card);
     const isLiked = card.likes.some((i) => i._id === currentUser._id);
     Api.toggleLike(card._id, isLiked)
       .then((newCard) => {
         setCards((state) =>
-          state.map((c) => (c._id === card._id ? newCard : c))
+          state.map((c) => (c._id === card._id ? newCard.data : c))
         );
       })
       .catch((err) => {
@@ -135,7 +136,7 @@ function App() {
   const handleUpdateUser = (name) => {
     Api.editProfile(name)
       .then((res) => {
-        setCurrentUser(res);
+        setCurrentUser(res.data);
         setIsRequestingServer(false);
         closeAllPopups();
       })
@@ -147,7 +148,7 @@ function App() {
   const handleUpdataAvatar = (avatar) => {
     Api.editAvatar(avatar.avatar.current.value)
       .then((res) => {
-        setCurrentUser(res);
+        setCurrentUser(res.data);
         setIsRequestingServer(false);
         closeAllPopups();
       })
@@ -159,7 +160,7 @@ function App() {
   const handleAddPlaceSubmit = (data) => {
     Api.setCard(data)
       .then((res) => {
-        setCards([res, ...cards]);
+        setCards([res.data, ...cards]);
         setIsRequestingServer(false);
         closeAllPopups();
       })

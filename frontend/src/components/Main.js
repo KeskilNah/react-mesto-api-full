@@ -7,7 +7,7 @@ export const CardsContext = React.createContext();
 
 function Main(props) {
   const currentUser = React.useContext(CurrentUserContext);
-  console.log(props)
+  console.log(props.cards)
   return (
     <main className="main">
       <section className="profile">
