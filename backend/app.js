@@ -26,10 +26,10 @@ app.use(express.urlencoded({ extended: true }));
 
 mongoose.connect('mongodb://localhost:27017/mestodb');
 
-app.use(cookieParser());
 app.use(helmet());
 app.use(requestLogger);
 app.use(limiter);
+app.use(cookieParser());
 app.use(cors(
   {
     origin: '*',
