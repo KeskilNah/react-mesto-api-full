@@ -96,7 +96,7 @@ export const newPlaceFormSelector = "adding-popup__form";
 export const profileFormSelector = "edit-popup__form";
 
 export const options = {
-  url: "http://api.super.mesto.nomoredomains.club",
+  url: "https://api.super.mesto.nomoredomains.club",
 };
 
 // export const getUserInfomation = {
